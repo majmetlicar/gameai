@@ -1,0 +1,441 @@
+/* Consolidated styles for GameAI pages */
+/* Global */
+/* Make layout mobile-first and prevent cutoffs */
+* { box-sizing: border-box; }
+html, body { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+a.logo-link { text-decoration: none; }
+.logo { cursor: pointer; margin: 0; color: #00ff99; }
+
+/* Header */
+header {
+  background: #1a1a1a;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #00ff99;
+  margin: 0;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  white-space: wrap;
+}
+nav a:hover {
+  color: #00ff99;
+}
+
+/* Profile dropdown and account-related pages were removed */
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 56px 18px;
+  background: linear-gradient(135deg, #0d0d0d, #1f1f1f);
+  word-break: break-word;
+}
+.hero h2 {
+  font-size: clamp(20px, 6vw, 36px);
+  color: #00ff99;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: clamp(14px, 3.6vw, 18px);
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.btn {
+  background: #00ff99;
+  color: #0d0d0d;
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+.btn:hover { background: #00cc77; }
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 50px;
+}
+.feature {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.feature h3 { color: #00ff99; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* Ensure large page sections expand so footer stays at bottom */
+.hero,
+.features {
+  flex: 1 0 auto;
+}
+
+/* Download page */
+.download-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 14px;
+  text-align: center;
+}
+.download-container h2 {
+  color: #00ff99;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.download-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+.download-btn {
+  background: #00ff99;
+  color: #0d0d0d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 25px 60px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+.download-btn:hover { background: #00cc77; }
+
+/* Contact */
+.contact-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 36px 14px;
+}
+
+.contact-box {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  color: #00ff99;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background: #00ff99;
+  color: #0d0d0d;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00cc77;
+}
+
+.info {
+  margin-top: 30px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Login and signup styles removed (pages deleted) */
+
+/* Utilities */
+.thin-hr {
+  border: 0.5px solid #333;
+  margin: 20px 0;
+}
+
+.mt-10 { margin-top: 10px; }
+
+.accent-link {
+  color: #00ff99;
+}
+
+/* Profile page styles removed (profile page deleted) */
+
+/* Logout button */
+.logout-btn {
+  background: #333;
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background: #444;
+}
+
+/* Mobile menu (hamburger + sidebar) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  width: 30px;
+  height: 20px;
+  box-sizing: content-box;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 260px;
+  background: #111;
+  box-shadow: -6px 0 18px rgba(0,0,0,0.6);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 1500;
+  padding-top: 60px;
+}
+.mobile-sidebar.open {
+  transform: translateX(0);
+}
+.mobile-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 20px;
+}
+.mobile-sidebar nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 12px 8px;
+  border-radius: 8px;
+}
+.mobile-sidebar nav a:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1400;
+}
+.sidebar-overlay.open { display: block; }
+
+/* Responsive behaviour */
+@media (max-width: 768px) {
+  nav { display: none; }
+  .menu-toggle { display: inline-flex; }
+  header { padding: 10px 14px; }
+  .features { padding: 28px 12px; gap: 14px; }
+  .feature { padding: 16px; }
+  .hero { padding: 48px 12px; }
+  .download-container { padding: 36px 12px; }
+  .contact-container { padding: 28px 12px; }
+  .btn, .download-btn, button { width: 100%; box-sizing: border-box; }
+  .logo { font-size: 20px; }
+}
+
+/* Prefer aspect-ratio based behaviour: hide mobile menu on wide 16:9 layouts */
+@media (min-aspect-ratio: 16/9) {
+  /* desktop / wide landscape: always show nav links and hide hamburger/sidebar */
+  .menu-toggle, .mobile-sidebar, .sidebar-overlay { display: none !important; }
+  nav { display: flex !important; }
+}
+
+/* For portrait (9:16) ensure mobile menu is available and nav is hidden */
+@media (orientation: portrait) and (max-aspect-ratio: 9/16) {
+  nav { display: none !important; }
+  .menu-toggle { display: inline-flex !important; }
+}
+
+/* Portrait / mobile-tall (approx 9:16) specific tweaks */
+@media (orientation: portrait) and (max-width: 480px) {
+  header { padding-top: calc(env(safe-area-inset-top, 12px)); }
+  .hero { padding: 40px 12px; }
+  .hero h2 { margin-bottom: 10px; }
+  .features { grid-template-columns: 1fr; padding: 20px 12px; }
+  .feature { text-align: left; }
+  .download-btn { padding: 18px; font-size: 18px; border-radius: 12px; }
+  .contact-box { padding: 18px; }
+  input, textarea { font-size: 16px; }
+  .logo { font-size: 20px; }
+}
+
+/* When header is collapsed (nav doesn't fit) hide nav and show hamburger */
+header.collapsed nav {
+  display: none;
+}
+header.collapsed .menu-toggle {
+  display: inline-flex;
+}
+
+/* Prevent body scroll when sidebar open */
+.no-scroll { overflow: hidden; }
+
+/* Contact success overlay */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,128,0,0.50);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+  z-index: 2000;
+}
+.success-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.success-box {
+  background: rgba(0,160,70,0.85);
+  border: 1px solid rgba(0,200,100,0.60);
+  color: #eaffef;
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+.success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 26px;
+  background: #00b85a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,180,100,0.18);
+}
+.success-icon svg { width: 28px; height: 28px; fill: #07260a; }
+.success-text { font-weight: 800; color: #eaffef; font-size: 18px; }
+
+/* Contact failure overlay */
+.failure-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* darker dim for visibility */
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 2000;
+}
+.failure-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.failure-box {
+  background: rgba(220,50,50,0.85);
+  border: 1px solid rgba(255,70,70,0.60);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  min-width: 220px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+}
+.failure-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background: #ff4747;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(255,0,0,0.16);
+}
+.failure-icon svg { width: 22px; height: 22px; fill: #fff; }
+.failure-text { font-weight: 800; color: #fff; font-size: 15px; }
+.failure-sub { color: #ffecec; font-size: 12px; margin-top: 2px; }
